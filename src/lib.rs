@@ -11,9 +11,16 @@ use std::path::PathBuf;
 use std::time::SystemTime;
 
 pub mod boxed;
+pub mod ctx;
 pub mod impls;
 
 pub use sys_traits_macros::auto_impl;
+
+pub use self::ctx::FsFileWithPathsInErrors;
+pub use self::ctx::OperationError;
+pub use self::ctx::OperationErrorKind;
+pub use self::ctx::PathsInErrorsExt;
+pub use self::ctx::SysWithPathsInErrors;
 
 use self::boxed::BoxedFsFile;
 use self::boxed::BoxedFsMetadataValue;
